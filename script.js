@@ -26,6 +26,7 @@ email.addEventListener("input", function() {
     if(!regex.test(emailInput)){
         // append email warning to group 1
         group1.append(emailWarning)
+        submit.disabled = true
         successMessage.remove()
     } 
     // remove warning if everything is fine
@@ -48,6 +49,7 @@ password.addEventListener("input", function(){
         // append password warning to group 2
         group2.append(passwordWarning)
         successMessage.remove()
+        submit.disabled = true
     } 
     // remove warning if everything is fine
     if (passwordInput.length >= 8 || !passwordInput){
